@@ -1,0 +1,150 @@
+/*
+    Do you need a dedicated CSS file per HTML page in addition to main.css?
+*/
+body {
+  background-image: url(/images/backgrpund4.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -100;
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+}
+
+.header {
+  margin: 20px;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.home-logo {
+  height: 8vh;
+  margin-right: 28px;
+}
+
+.resources-logo {
+  height: 10vh;
+  margin-right: 8px;
+}
+
+.army-logo {
+  height: 12vh;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #433c3c;
+  text-shadow: 0 0 1cqh hsl(206, 69%, 39%);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+@media (min-width: 480px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .resources-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .getting-resources-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 18px;
+  }
+  .resources-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .getting-resources-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: row;
+  }
+
+  .resources-container {
+    flex-direction: column;
+  }
+  .getting-resources-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.resources-container {
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  gap: 4rem;
+}
+
+.icons {
+  background: rgba(255, 255, 255, 0.3);
+  width: 20%;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 48%;
+  box-shadow: 0 0 40px hsl(186, 41%, 39%);
+}
+
+.getting-resources-container {
+  display: flex;
+}
+
+.getting-resources-container img {
+  padding: 4px;
+  margin: 8px;
+  width: 36vw;
+  height: 32vh;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: rgb(165, 158, 158);
+}
+
+.getting-resources-container img:hover {
+  box-shadow: 0 0 24px hsl(208, 72%, 56%);
+}
+
+.mines-container:hover {
+  cursor: url(/images/pickaxe-cursor.png), auto;
+}
+
+.wood-container {
+  cursor: url(/images/axe-cursor.png), auto;
+}
+
+.mines-container:active,
+.wood-container:active {
+  transition: transform 0.25s ease;
+  transform: scale(0.96);
+}

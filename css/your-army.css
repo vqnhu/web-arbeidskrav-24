@@ -1,0 +1,161 @@
+body {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/army-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeInZoom 2s forwards;
+  z-index: -100;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: left;
+  color: #141617;
+  text-shadow: 0 0 1cqh hsl(200, 8%, 22%);
+  margin: 0 16px;
+}
+
+.army-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.soldier-section {
+  display: grid;
+  gap: 20px;
+  margin: 0 16px;
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 24px;
+  }
+  .soldier-section {
+    grid-template-columns: repeat(8, 1fr);
+    margin: 0 16px;
+  }
+
+  .character-frame-container {
+    width: 320px;
+    height: 260px;
+  }
+
+  .character-name {
+    font-size: 28px;
+  }
+
+  .character-pic-container {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .soldier-section {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .character-frame-container {
+    width: 280px;
+    height: 220px;
+  }
+
+  .character-name {
+    font-size: 24px;
+  }
+
+  .character-pic-container {
+    width: 160px;
+    height: 220px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .title {
+    font-size: 16px;
+  }
+  .soldier-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .character-frame-container {
+    width: 240px;
+    height: 180px;
+  }
+
+  .character-name {
+    font-size: 20px;
+  }
+
+  .character-pic-container {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+  .title {
+    font-size: 12px;
+  }
+  .soldier-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+  .title {
+    font-size: 12px;
+  }
+}
+
+.character-frame-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(19, 33, 19);
+  border-radius: 16px;
+}
+
+.character-name {
+  margin: 8px;
+  font-size: 24px;
+  color: rgb(199, 197, 197);
+}
+
+.character-pic-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
